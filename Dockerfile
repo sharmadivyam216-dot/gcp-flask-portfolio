@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["python", "main.py"]
+ENV PORT=8080
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "run:app"]

@@ -1,5 +1,7 @@
 runtime: python313
 
+entrypoint: gunicorn -b :$PORT run:app
+
 handlers:
   - url: /static
     static_dir: static

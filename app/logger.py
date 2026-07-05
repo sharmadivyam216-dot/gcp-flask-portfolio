@@ -3,12 +3,8 @@ import os
 
 
 def configure_logger():
-    # Create logs directory if it doesn't exist
-    os.makedirs("logs", exist_ok=True)
-
     logger = logging.getLogger("portfolio_app")
 
-    # Prevent duplicate handlers
     if logger.hasHandlers():
         return logger
 
@@ -18,15 +14,17 @@ def configure_logger():
         "%(asctime)s - %(levelname)s - %(message)s"
     )
 
-    # Write logs to a file
-    file_handler = logging.FileHandler("logs/app.log")
-    file_handler.setFormatter(formatter)
-
-    # Show logs in the terminal
+    # Console logging (works locally and on Google Cloud)
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
-
-    logger.addHandler(file_handler)
     logger.addHandler(console_handler)
+
+    # Only create log files when running locally
+    if not os.getenv("GAE_ENV"):
+        os.makedirs("logs", exist_ok=True)
+
+        file_handler = logging.FileHandler("logs/app.log")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
 
     return logger

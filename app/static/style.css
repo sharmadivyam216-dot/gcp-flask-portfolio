@@ -1,0 +1,436 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0F172A;
+    color:#F8FAFC;
+    line-height:1.7;
+}
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+h1,h2,h3{
+    font-weight:700;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#0F172A;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#3B82F6;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:#CBD5E1;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#3B82F6;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    padding-top:170px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#1E293B;
+    color:#60A5FA;
+    border-radius:40px;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#3B82F6;
+}
+
+.hero p{
+    color:#94A3B8;
+    font-size:19px;
+    margin-bottom:35px;
+    max-width:650px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn{
+    background:#3B82F6;
+    color:white;
+    padding:15px 35px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.primary-btn:hover{
+    background:#2563EB;
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    border:2px solid #3B82F6;
+    color:#3B82F6;
+    padding:15px 35px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.secondary-btn:hover{
+    background:#3B82F6;
+    color:white;
+}
+
+/* ===========================
+   HERO CARD
+=========================== */
+
+.hero-card{
+    background:#1E293B;
+    border-radius:20px;
+    padding:40px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.hero-card h3{
+    margin-bottom:30px;
+    font-size:24px;
+}
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.tech-grid span{
+    background:#0F172A;
+    padding:14px;
+    border-radius:10px;
+    text-align:center;
+    color:#CBD5E1;
+    transition:.3s;
+}
+
+.tech-grid span:hover{
+    background:#3B82F6;
+    color:white;
+}
+/* ===========================
+   SECTION HEADINGS
+=========================== */
+
+.section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+.section-text{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+    color:#94A3B8;
+    font-size:18px;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills-grid{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#1E293B;
+    padding:28px;
+    border-radius:16px;
+    text-align:center;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    background:#3B82F6;
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.projects-grid{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    background:#1E293B;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.project-card p{
+    color:#94A3B8;
+    margin-bottom:25px;
+}
+
+.project-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.project-tags span{
+    background:#0F172A;
+    color:#60A5FA;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:14px;
+}
+
+.project-card a{
+    display:inline-block;
+    background:#3B82F6;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.project-card a:hover{
+    background:#2563EB;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.social-links{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.social-links a{
+    width:65px;
+    height:65px;
+    background:#1E293B;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:28px;
+    transition:.3s;
+}
+
+.social-links a:hover{
+    background:#3B82F6;
+    transform:translateY(-6px);
+}
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:80px;
+    padding:35px 20px;
+    text-align:center;
+    color:#94A3B8;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:#0B1120;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0F172A;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3B82F6;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2563EB;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.hero-text,
+.hero-card,
+.skill-card,
+.project-card{
+    animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   BUTTON EFFECTS
+=========================== */
+
+.primary-btn,
+.secondary-btn,
+.project-card a{
+
+    cursor:pointer;
+
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.project-card a:hover{
+
+    box-shadow:0 12px 30px rgba(59,130,246,.35);
+
+}
+
+/* ===========================
+   SECTION SPACING
+=========================== */
+
+.section{
+
+    padding-top:110px;
+    padding-bottom:110px;
+
+}
+
+.section:nth-child(even){
+
+    background:#111C2D;
+
+}
